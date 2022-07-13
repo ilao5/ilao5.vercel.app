@@ -1,0 +1,57 @@
+<div class="entry post">
+
+	<div class="entry-content">
+	  <article class="entry-body">
+	  	{% if content %}
+	  		{{ content }}
+  		{% else %}
+	  		{{ page.excerpt }}
+	  		{% if page.content contains '<!-- more -->' %}
+	  		<p><a href="{{ page.url }}">Read more »</a></p>
+	  		{% endif %}
+  		{% endif %}
+	  </article>
+    </div>
+
+</div>
+
+<!-- <div class="article-meta">
+    {{ page.date | date: "%Y-%m-%d" }}
+    
+</div> -->
+
+
+<!--
+<div class="article-meta">
+    {{ page.date | date: "%Y-%m-%d" }}
+    {% if page.categories %} • category: 
+        {% for category in page.categories %}
+        <a href="/{{site.categories_path}}/#{{category}}-ref" >{{ category|capitalize }}</a>
+        {% endfor%}
+    {% endif %}
+    {% if page.tags %} • tag: 
+        {% for tag in page.tags %}
+            <a href="/{{site.tags_path}}/#{{tag}}-ref" >{{ tag|capitalize }}</a>
+        {% endfor%}
+    {% endif %}
+</div>
+-->
+
+{% if content and page.author_footer != false %}
+
+	{% include post_footer.html %}
+
+{% endif %}
+
+
+<!-- {% if content and page.author_statistics != false %}
+
+    {% include statistics.html %}
+
+{% endif %} -->
+
+
+{% if site.intensedebate_comments %}
+      {% include intensedebate-comments.html %}  
+{% endif %}
+

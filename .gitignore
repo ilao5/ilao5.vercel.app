@@ -1,9 +1,5 @@
 _site
 .sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
-public
-.env
-.env.build
-.vercel
+*~
+*.swp
+.idea
