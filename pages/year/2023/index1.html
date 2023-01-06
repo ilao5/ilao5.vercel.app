@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - #Codevember 2017 #1 : Galaxy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style_text.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+
+<!--<div class="container" style="position:absolute;top:0;left:0;z-index:99999;">
+  <p>Lorem ipsum dolor sit.</p>
+ </div> -->
+<canvas id="starfield" style="position:absolute;z-index:-1;"></canvas>
+
+<div id="div-btns" class="btn-wrap">
+  <a id = "btn-again" class="button rollover">
+    <span class="roll-text">祝福语</span>
+    <span class="roll-text">敬你，敬你</span>
+  </a>
+  <a id="btn-share" class="button rollover">
+    <span class="roll-text">转发分享</span>
+    <span class="roll-text">以您之名义</span>
+  </a>
+  <a id="btn-donate" class="button rollover">
+    <span class="roll-text">打赏</span>
+    <span class="roll-text">给您拜年了</span>
+  </a>
+</div>
+
+
+
+<!-- <div class="popup-window away out" id="popupwindow">
+  <div class="popup-page">
+    <button id="close">Close popup</button>
+    <h1>Put your content here please</h1>
+  </div>
+</div> -->
+
+<div id="div-share" class="page-popup away out">
+  <div class="form">
+      
+    <div class="tab-content">
+      <div id="signup">   
+        <!-- <h1>Sign Up for Free</h1> -->
+        
+        <!-- <form> -->
+        
+        <div class="top-row">
+          <div class="field-wrap">
+            <!-- <label name="aa">
+              发送人名字<span class="req">*</span>
+            </label> -->
+            <input id="input-from" type="text" placeholder="发送人名字" required autocomplete="off" />
+          </div>
+      
+          <div class="field-wrap">
+            <!-- <label name="bb">
+              接收人名字<span class="req">*</span>
+            </label> -->
+            <input id="input-to" type="text" placeholder="接收人名字" required autocomplete="off"/>
+          </div>
+        </div>
+
+        <div id="outputBorder">
+          <span>
+            <div id="output">
+
+            </div>
+          </span>
+        </div>
+  
+        
+        
+        <button id="btn-Gen-QRCode"  class="abutton button-block">生成祝福二维码</button>
+        <button id="btn-ReGen-QRCode"  class="abutton button-block">关闭</button>
+        
+        <!-- </form> -->
+  
+      </div>
+      
+     
+      
+    </div><!-- tab-content -->
+    
+  </div>
+</div>
+
+
+<div id="div-donate" class="page-popup away out">
+  <div class="form">
+      
+    <!-- <div class="tab-content"> -->
+      <!-- <div id="signup"> -->
+        <img src = "wechatpay.jpg" style="width:100%;height:100%;"/>
+
+        <button id="btn-Close-Donate"  class="abutton button-block">关闭</button>
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
+</div>
+
+<div id="div-start" class="page-start">
+  <div class="frames">
+    <div class="container">
+      <div class="rabit">
+        <div class="rbody"></div>
+        <div class="eye"></div>
+        <div class="ear"></div>
+        <div class="teal"></div>
+        <div class="lfoot"></div>
+        <div class="rfoot"></div>
+      </div>
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <button id="btn-start">一条来自Lao5的新年祝福</button>
+</div>
+
+
+
+<!-- partial -->
+<script  src="./qrcode.min.js"></script>
+  <script  src="./script.js"></script>
+  <script  src="./script_text.js"></script>
+
+</body>
+</html>
