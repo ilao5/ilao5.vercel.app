@@ -178,7 +178,8 @@ class Car {
   }
   animate(timestamp) {
     this.offset = Math.sin(timestamp * 2);
-  }}
+  }
+}
 
 
 const HILL_MARGIN = 500;
@@ -252,8 +253,9 @@ class Scene {
     new StarField(canvas),
     new Hills(canvas, COLORS.EVEN_LESS_BLACK, 4),
     new Hills(canvas, COLORS.LESS_BLACK, 2),
-    new Road(canvas),
-    new Car(canvas)];
+    new Road(canvas)
+    //new Car(canvas)
+  ];
 
   }
   resize() {
